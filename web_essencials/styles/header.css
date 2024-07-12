@@ -4,7 +4,11 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin: 0px 200px 0px 200px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
 }
 
 .header-navbar {
@@ -30,7 +34,6 @@
 }
 
 .header-navbar a:hover {
-  color: #F05123;
+  color: #f05123;
   transition: 400ms;
 }
-
