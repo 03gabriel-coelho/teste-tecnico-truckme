@@ -28,6 +28,7 @@
 .contact-form label textarea {
   margin-top: 3px;
   margin-bottom: 10px;
+  min-width: 29vw;
   width: 29vw;
   height: 200px;
   resize: none;
@@ -36,4 +37,18 @@
   border: 1px solid #F05123;
   border-radius: 10px;
   font-family: 'Montserrat';
+}
+
+.contact-form button {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 700px) {
+  .contact-form label input {
+    min-width: 70vw;
+  }
+
+  .contact-form label textarea {
+    min-width: 70vw;
+  }
 }

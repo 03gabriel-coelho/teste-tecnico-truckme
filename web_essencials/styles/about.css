@@ -13,19 +13,3 @@
 .about #second-paragraph {
   display: none;
 }
-
-.about button {
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  padding: 5px 25px 5px 25px;
-  background-color: #f05123;
-  color: #FFF;
-  border-radius: 15px;
-  border: none;
-  transition: 500ms;
-  cursor: pointer;
-}
-
-.about button:hover {
-  font-size: 17px;
-}
