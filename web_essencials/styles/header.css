@@ -44,4 +44,13 @@
     flex-direction: column;
     height: 100px;
   }
+
+  .header-navbar {
+    background-color: #f05123;
+    width: 100%;
+  }
+
+  .header-navbar a {
+    color: #FFF;
+  }
 }
