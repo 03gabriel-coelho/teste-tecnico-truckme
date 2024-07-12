@@ -1,0 +1,21 @@
+.service-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.service-table tr th {
+  min-width: 25vw;
+  background-color: #f05123;
+  color: #fff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.service-table tr td {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #f5bdae;
+}
