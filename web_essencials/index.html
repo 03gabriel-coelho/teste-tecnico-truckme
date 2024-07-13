@@ -1,11 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste Truckme</title>
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/body.css" />
+    <link rel="stylesheet" href="./styles/banner.css" />
+    <link rel="stylesheet" href="./styles/about.css" />
+    <link rel="stylesheet" href="./styles/table.css" />
+    <link rel="stylesheet" href="./styles/form.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://truckme.com.br/landingpage/wp-content/uploads/2020/09/favicon-truckme-solucoes-inteligentes-frete-10.png"
+      sizes="32x32"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="https://truckme.com.br/landingpage/wp-content/uploads/2020/09/logo_truck_me_frete_plataforma.png"
+      />
+      <nav class="header-navbar">
+        <a href="#home-banner">Home</a>
+        <a href="#about">Sobre</a>
+        <a href="#service-table">Serviços</a>
+        <a href="#contact-form">Contato</a>
+      </nav>
+    </header>
+    <div class="banner" id="home-banner">
+      <h1>Bem vindo ao Truckme!</h1>
+      <h1>Solução Inteligente em Fretes.</h1>
+    </div>
+    <section class="about" id="about">
+      <h1 class="title">Sobre nós</h1>
+      <p>
+        Através da nossa Plataforma Web, garantimos serviço com todos os
+        requisitos e obrigações da transportadora tradicional.
+      </p>
+      <p id="second-paragraph">
+        Conectamos vocês Embarcadores aos mais qualificados transportadores
+        autônomos, através de um criterioso processo de gestão e simplificação
+        de processos do frete!
+      </p>
+      <button id="button-expand-text">Leia mais!</button>
+    </section>
+    <table class="service-table" id="service-table">
+      <h1 class="title">Serviços</h1>
+      <tr>
+        <th>Nome</th>
+        <th>Descrição</th>
+        <th>Preço</th>
+      </tr>
+      <tr>
+        <td>Transporte Rápido</td>
+        <td>Entrega expressa de mercadorias com prazo máximo de 24 horas.</td>
+        <td>R$ 150,00</td>
+      </tr>
+      <tr>
+        <td>Frete Econômico</td>
+        <td>Solução de transporte com custo reduzido para grandes volumes.</td>
+        <td>R$ 100,00</td>
+      </tr>
+      <tr>
+        <td>Logística Reversa</td>
+        <td>
+          Serviço de devolução de mercadorias com gestão completa do processo.
+        </td>
+        <td>R$ 80,00</td>
+      </tr>
+      <tr>
+        <td>Armazenagem Segura</td>
+        <td>Serviço de armazenagem em depósitos seguros e monitorados.</td>
+        <td>R$ 200,00/mês</td>
+      </tr>
+      <tr>
+        <td>Gestão de Fretes</td>
+        <td>
+          Gestão completa do transporte de mercadorias com otimização de rotas.
+        </td>
+        <td>R$ 250,00</td>
+      </tr>
+    </table>
+    <form class="contact-form" id="contact-form">
+      <h1 class="title">Contato</h1>
+      <label for="contact-name"
+        >Nome
+        <input
+          type="text"
+          id="contact-name"
+          name="contact-name"
+          placeholder="Digite seu nome"
+        />
+      </label>
+      <label for="contact-email"
+        >E-mail
+        <input
+          type="email"
+          id="contact-email"
+          name="contact-email"
+          placeholder="Digite seu e-mail"
+        />
+      </label>
+      <label for="contact-message"
+        >Mensagem
+        <textarea
+          id="contact-message"
+          name="contact-message"
+          rows="4"
+          value="aaaa"
+          placeholder="Deixe sua mensagem"
+        ></textarea>
+      </label>
+      <p id="form-success">Enviado com sucesso!</p>
+      <p id="form-error">Preencha os campos corretamente!</p>
+      <button id="button-send-form" type="submit">Enviar</button>
+    </form>
+    <footer class="footer-carousel">
+      <button type="button" id="carousel-back">Anterior</button>
+      <div>
+        <img
+          id="carousel-image"
+        />
+      </div>
+      <button type="button" id="carousel-next">Próximo</button>
+    </footer>
+    <script src="./scripts/expandText.js" defer></script>
+    <script src="./scripts/validateForm.js" defer></script>
+    <script src="./scripts/carouselMovement.js" defer></script>
+  </body>
 </html>
