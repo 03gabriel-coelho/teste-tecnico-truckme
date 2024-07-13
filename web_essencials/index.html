@@ -10,13 +10,18 @@
     <link rel="stylesheet" href="./styles/about.css" />
     <link rel="stylesheet" href="./styles/table.css" />
     <link rel="stylesheet" href="./styles/form.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="https://truckme.com.br/landingpage/wp-content/uploads/2020/09/favicon-truckme-solucoes-inteligentes-frete-10.png" sizes="32x32">
+    <link
+      rel="icon"
+      href="https://truckme.com.br/landingpage/wp-content/uploads/2020/09/favicon-truckme-solucoes-inteligentes-frete-10.png"
+      sizes="32x32"
+    />
   </head>
   <body>
     <header class="header">
@@ -36,8 +41,15 @@
     </div>
     <section class="about" id="about">
       <h1 class="title">Sobre nós</h1>
-      <p>Através da nossa Plataforma Web, garantimos serviço com todos os requisitos e obrigações da transportadora tradicional.</p>
-      <p id="second-paragraph">Conectamos vocês Embarcadores aos mais qualificados transportadores autônomos, através de um criterioso processo de gestão e simplificação de processos do frete!</p>
+      <p>
+        Através da nossa Plataforma Web, garantimos serviço com todos os
+        requisitos e obrigações da transportadora tradicional.
+      </p>
+      <p id="second-paragraph">
+        Conectamos vocês Embarcadores aos mais qualificados transportadores
+        autônomos, através de um criterioso processo de gestão e simplificação
+        de processos do frete!
+      </p>
       <button id="button-expand-text">Leia mais!</button>
     </section>
     <table class="service-table" id="service-table">
@@ -59,7 +71,9 @@
       </tr>
       <tr>
         <td>Logística Reversa</td>
-        <td>Serviço de devolução de mercadorias com gestão completa do processo.</td>
+        <td>
+          Serviço de devolução de mercadorias com gestão completa do processo.
+        </td>
         <td>R$ 80,00</td>
       </tr>
       <tr>
@@ -69,26 +83,57 @@
       </tr>
       <tr>
         <td>Gestão de Fretes</td>
-        <td>Gestão completa do transporte de mercadorias com otimização de rotas.</td>
+        <td>
+          Gestão completa do transporte de mercadorias com otimização de rotas.
+        </td>
         <td>R$ 250,00</td>
       </tr>
     </table>
     <form class="contact-form" id="contact-form">
       <h1 class="title">Contato</h1>
-      <label for="contact-name">Nome
-        <input type="text" id="contact-name" name="contact-name">
+      <label for="contact-name"
+        >Nome
+        <input
+          type="text"
+          id="contact-name"
+          name="contact-name"
+          placeholder="Digite seu nome"
+        />
       </label>
-      <label for="contact-email">E-mail
-        <input type="email" id="contact-email" name="contact-email">
+      <label for="contact-email"
+        >E-mail
+        <input
+          type="email"
+          id="contact-email"
+          name="contact-email"
+          placeholder="Digite seu e-mail"
+        />
       </label>
-      <label for="contact-message">Mensagem
-        <textarea id="contact-message" name="contact-message" rows="4" value="aaaa"></textarea>
+      <label for="contact-message"
+        >Mensagem
+        <textarea
+          id="contact-message"
+          name="contact-message"
+          rows="4"
+          value="aaaa"
+          placeholder="Deixe sua mensagem"
+        ></textarea>
       </label>
       <p id="form-success">Enviado com sucesso!</p>
       <p id="form-error">Preencha os campos corretamente!</p>
       <button id="button-send-form" type="submit">Enviar</button>
     </form>
+    <footer class="footer-carousel">
+      <button type="button" id="carousel-back">Anterior</button>
+      <div>
+        <img
+          id="carousel-image"
+        />
+      </div>
+      <button type="button" id="carousel-next">Próximo</button>
+    </footer>
     <script src="./scripts/expandText.js" defer></script>
     <script src="./scripts/validateForm.js" defer></script>
+    <script src="./scripts/carouselMovement.js" defer></script>
   </body>
 </html>

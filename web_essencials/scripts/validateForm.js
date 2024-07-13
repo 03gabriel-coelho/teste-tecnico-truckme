@@ -13,6 +13,15 @@ let valueName = "";
 let valueEmail = "";
 let valueMessage = "";
 
+function resertForm() {
+  valueName = "";
+  valueEmail = "";
+  valueMessage = "";
+  inputName.value = "";
+  inputEmail.value = "";
+  inputMessage.value = "";
+}
+
 function getValues() {
   inputName.addEventListener("input", ({ target: { value } }) => {
     valueName = value;
@@ -43,6 +52,8 @@ function sendWarning(typeWarning) {
   if (typeWarning === "success") {
     if (formSucess.style.display !== "flex") {
       formSucess.style.display = "flex";
+      
+      resertForm();
 
       setTimeout(() => {
         if (formSucess.style.display !== "none")
