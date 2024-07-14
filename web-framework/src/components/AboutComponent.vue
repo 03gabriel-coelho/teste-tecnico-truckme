@@ -1,4 +1,14 @@
 <script setup>
+import { ref } from 'vue';
+
+const isExpanded = ref(false);
+const hideButton = ref(false);
+
+function toggleExpandText() {
+  isExpanded.value = !isExpanded.value;
+  hideButton.value = !hideButton.value;
+}
+
 defineProps({})
 </script>
 
@@ -9,12 +19,18 @@ defineProps({})
       Através da nossa Plataforma Web, garantimos serviço com todos os
       requisitos e obrigações da transportadora tradicional.
     </p>
-    <p id="second-paragraph">
+    <p id="second-paragraph" :class="{ 'show-flex': isExpanded }">
       Conectamos vocês Embarcadores aos mais qualificados transportadores
       autônomos, através de um criterioso processo de gestão e simplificação
       de processos do frete!
     </p>
-    <button id="button-expand-text">Leia mais!</button>
+    <button
+      @click="toggleExpandText"
+      id="button-expand-text"
+      :class="{ 'button-remover': hideButton }"
+    >
+      Leia mais!
+    </button>
   </section>
 </template>
 
@@ -32,6 +48,14 @@ defineProps({})
 }
 
 .about #second-paragraph {
+  display: none;
+}
+
+.about #second-paragraph.show-flex {
+  display: flex;
+}
+
+.about #button-expand-text.button-remover {
   display: none;
 }
 </style>
