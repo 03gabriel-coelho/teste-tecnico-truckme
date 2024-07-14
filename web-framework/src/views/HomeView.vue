@@ -1,7 +1,7 @@
 <script setup>
-// import TheWelcome from '../components/TheWelcome.vue'
+  import BannerComponent from '../components/BannerComponent.vue'
 </script>
 
 <template>
-  <p style="margin-top: 300px;">Teste</p>
+  <BannerComponent />
 </template>
