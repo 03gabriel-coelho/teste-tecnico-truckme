@@ -13,6 +13,13 @@ const validateForm = () => {
   if (name.value.trim().length > 0 && emailRegex.test(email.value.trim()) && message.value.trim().length > 0) {
     successMessage.value = true;
     errorMessage.value = false;
+    name.value = '';
+    email.value = '';
+    message.value = '';
+
+    setTimeout(() => {
+      successMessage.value = false;
+    }, 10000)
   } else {
     successMessage.value = false;
     errorMessage.value = true;
