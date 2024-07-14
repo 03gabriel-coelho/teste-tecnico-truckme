@@ -34,5 +34,4 @@ defineProps({})
 .about #second-paragraph {
   display: none;
 }
-
 </style>
