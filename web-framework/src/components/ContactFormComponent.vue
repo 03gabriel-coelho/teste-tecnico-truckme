@@ -1,9 +1,29 @@
 <script setup>
+import { ref } from 'vue';
+
+const name = ref('');
+const email = ref('');
+const message = ref('');
+const successMessage = ref(false);
+const errorMessage = ref(false);
+
+const validateForm = () => {
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  if (name.value.trim().length > 0 && emailRegex.test(email.value.trim()) && message.value.trim().length > 0) {
+    successMessage.value = true;
+    errorMessage.value = false;
+  } else {
+    successMessage.value = false;
+    errorMessage.value = true;
+  }
+};
+
 defineProps({})
 </script>
 
 <template>
-  <form class="contact-form" id="contact-form">
+  <form class="contact-form" id="contact-form" @submit.prevent="validateForm">
     <h1 class="title">Contato</h1>
     <label for="contact-name"
       >Nome
@@ -12,6 +32,7 @@ defineProps({})
         id="contact-name"
         name="contact-name"
         placeholder="Digite seu nome"
+        v-model="name"
       />
     </label>
     <label for="contact-email"
@@ -21,6 +42,7 @@ defineProps({})
         id="contact-email"
         name="contact-email"
         placeholder="Digite seu e-mail"
+        v-model="email"
       />
     </label>
     <label for="contact-message"
@@ -31,10 +53,11 @@ defineProps({})
         rows="4"
         value="aaaa"
         placeholder="Deixe sua mensagem"
+        v-model="message"
       ></textarea>
     </label>
-    <p id="form-success">Enviado com sucesso!</p>
-    <p id="form-error">Preencha os campos corretamente!</p>
+    <p id="form-success" :class="{ 'show': successMessage }">Enviado com sucesso!</p>
+    <p id="form-error" :class="{ 'show': errorMessage }">Preencha os campos corretamente!</p>
     <button id="button-send-form" type="submit">Enviar</button>
   </form>
 </template>
@@ -98,6 +121,14 @@ defineProps({})
 .contact-form #form-error {
   display: none;
   color: red;
+}
+
+.contact-form #form-success.show {
+  display: flex;
+}
+
+.contact-form #form-error.show {
+  display: flex;
 }
 
 @media (max-width: 700px) {
